@@ -1,8 +1,11 @@
-// TODO: import required modules
+import './home.styl';
+import angular from 'angular';
+import _ from 'lodash';
 
-const home = angular.module('home', [
-
-])
+// placing an export in front of ar var is the same
+// as exporting the var at the end of the file
+// using export {varname}
+export const home = angular.module('home', [])
 .config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 
@@ -28,10 +31,7 @@ const home = angular.module('home', [
 })
 .controller('HomeController', function($scope) {
   $scope.title = 'Welcome to the blog!'
-  // TODO: be sure to import lodash!
   $scope.items = _.times(5, i => {
     return `I am item ${i}`;
   });
 });
-
-// TODO: export the module
