@@ -74,10 +74,13 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
 
+    //Enable or disable failure on running empty test-suites. If disabled the program will return exit-code 0 and display a warning
+    failOnEmptyTestSuite:false,
+
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['Chrome','Firefox', 'PhantomJS'],
 
 
     // Continuous Integration mode
